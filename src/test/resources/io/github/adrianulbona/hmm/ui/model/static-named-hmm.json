@@ -1,0 +1,149 @@
+{
+  "states": [
+    {
+      "name": "fever"
+    },
+    {
+      "name": "healthy"
+    }
+  ],
+  "observations": [
+    {
+      "name": "cold"
+    },
+    {
+      "name": "normal"
+    },
+    {
+      "name": "dizzy"
+    }
+  ],
+  "initialProbabilities": [
+    [
+      {
+        "name": "fever"
+      },
+      0.4
+    ],
+    [
+      {
+        "name": "healthy"
+      },
+      0.6
+    ]
+  ],
+  "emissionProbabilities": [
+    [
+      {
+        "state": {
+          "name": "healthy"
+        },
+        "observation": {
+          "name": "normal"
+        }
+      },
+      0.5
+    ],
+    [
+      {
+        "state": {
+          "name": "healthy"
+        },
+        "observation": {
+          "name": "cold"
+        }
+      },
+      0.4
+    ],
+    [
+      {
+        "state": {
+          "name": "fever"
+        },
+        "observation": {
+          "name": "dizzy"
+        }
+      },
+      0.6
+    ],
+    [
+      {
+        "state": {
+          "name": "fever"
+        },
+        "observation": {
+          "name": "normal"
+        }
+      },
+      0.1
+    ],
+    [
+      {
+        "state": {
+          "name": "healthy"
+        },
+        "observation": {
+          "name": "dizzy"
+        }
+      },
+      0.1
+    ],
+    [
+      {
+        "state": {
+          "name": "fever"
+        },
+        "observation": {
+          "name": "cold"
+        }
+      },
+      0.3
+    ]
+  ],
+  "transitionProbabilities": [
+    [
+      {
+        "from": {
+          "name": "fever"
+        },
+        "to": {
+          "name": "fever"
+        }
+      },
+      0.6
+    ],
+    [
+      {
+        "from": {
+          "name": "healthy"
+        },
+        "to": {
+          "name": "fever"
+        }
+      },
+      0.3
+    ],
+    [
+      {
+        "from": {
+          "name": "fever"
+        },
+        "to": {
+          "name": "healthy"
+        }
+      },
+      0.4
+    ],
+    [
+      {
+        "from": {
+          "name": "healthy"
+        },
+        "to": {
+          "name": "healthy"
+        }
+      },
+      0.7
+    ]
+  ]
+}
